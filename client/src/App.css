@@ -1,0 +1,86 @@
+.text-right {
+	text-align: right;
+}
+
+.spinner-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+/* Floating add button */
+.btn-floating {
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+	background: transparent;
+	border: none;
+}
+
+.btn-floating:hover {
+	background: transparent;
+}
+
+.btn-floating:focus,
+.btn-floating:active {
+	outline: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+/* Add new post tooltip */
+.tooltip {
+	background: transparent;
+}
+
+.tooltip .arrow::before {
+	border-left-color: #78c2ad;
+}
+
+.tooltip-inner {
+	background: #78c2ad;
+}
+
+/* Post border thicker */
+.border-success,
+.border-warning,
+.border-danger {
+	border-width: 2px;
+}
+
+/* Post title */
+.todo-title {
+	margin-bottom: 0.5rem;
+}
+/* Background status Post */
+.badge-danger {
+	background-color: rgba(var(--bs-danger-rgb), var(--bs-border-opacity)) !important;
+}
+.badge-warning {
+	background-color: rgba(var(--bs-warning-rgb), var(--bs-border-opacity)) !important;
+}
+.badge-success {
+	background-color: rgba(var(--bs-success-rgb), var(--bs-border-opacity)) !important;
+}
+
+td {
+	vertical-align: inherit !important;
+}
+
+html *::-webkit-scrollbar {
+	border-radius: 0;
+	width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+html *::-webkit-scrollbar-track {
+	border-radius: 0;
+	background-color: rgba(0, 0, 0, 0);
+}
+  

@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+    "nickName": "Võ Phạm Quốc Anh",
+    "username": "vophamquocanh12",
+    "password": "quocanh1512002"
+}   
+
+###
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+   "username": "vophamquocanh12",
+    "password": "quocanh1512002"  
+}
+
+
+###
+POST http://localhost:5000/api/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+    
+{
+    "title": "Demo",
+    "level": "HIGH"
+}
+
+###
+GET http://localhost:5000/api/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+
+####
+
+PUT http://localhost:5000/api/todos/64550e5ecff5101dfcc680b4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+
+{
+    "title": "Demo",
+    "level": "HIGH",
+    "done": true
+}
+
+###
+DELETE http://localhost:5000/api/todos/644b952ee9607f4d103d460f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+
+###
+
+GET http://localhost:5000/api/todos/question/search?title=todo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw

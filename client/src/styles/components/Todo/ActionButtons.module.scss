@@ -1,0 +1,25 @@
+/* Todo button */
+.todo-button {
+	background: transparent;
+	border: none;
+}
+
+.todo-button:hover {
+	background: transparent;
+}
+
+a.todo-button.btn:focus,
+a.todo-button.btn:active {
+	outline: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+button.todo-button.btn:focus,
+button.todo-button.btn:active {
+	outline: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
