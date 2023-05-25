@@ -32,7 +32,7 @@ const TodoController = {
 		}
 	},
 
-	//todos
+	//todos/done : not done
 	getAllTodoDone: async (req, res) => {
 		try {
 			const todos = await Todo.find({user: req.userId, done: true})
@@ -44,14 +44,23 @@ const TodoController = {
 		}
 	},
 
-	//todos/level/:level
+	//todos/question/level : not done
 	getAllTodoLevel: async (req, res) => {
-		const level = req.params.level
 		try {
-			const todos = await Todo.find({level: level})
-			return res.status(200).json(todos)
+			const level = req.query.level
+
+			const filter = {user: req.userId}
+			if (level) {
+				filter.level = {$regex: new RegExp(level, 'i')}
+			}
+
+			const todos = await Todo.find(filter)
+				.populate('user', ['username'])
+				.sort({createdAt: -1})
+
+			res.json({success: true, todos})
 		} catch (error) {
-			res.status(404).json({message: 'Not found level!'})
+			res.status(500).json({success: false, message: 'Internal server error!'})
 		}
 	},
 

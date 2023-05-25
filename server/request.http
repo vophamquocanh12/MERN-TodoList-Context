@@ -20,7 +20,7 @@ Content-Type: application/json
 ###
 POST http://localhost:5000/api/todos
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
     
 {
     "title": "Demo",
@@ -29,13 +29,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1M
 
 ###
 GET http://localhost:5000/api/todos
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
 
 ####
 
 PUT http://localhost:5000/api/todos/64550e5ecff5101dfcc680b4
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
 
 {
     "title": "Demo",
@@ -45,9 +45,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1M
 
 ###
 DELETE http://localhost:5000/api/todos/644b952ee9607f4d103d460f
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
 
 ###
 
 GET http://localhost:5000/api/todos/question/search?title=todo
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODM2ODYxMTB9.2BM7mhCU5kpaWzuX364guoU7iXu5P_A2hYLPTemXlLw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
+
+###
+GET http://localhost:5000/api/todos/done
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
+
+###
+GET http://localhost:5000/api/todos/question/level?level=medium
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDU1MGU0ZGNmZjUxMDFkZmNjNjgwYjEiLCJpYXQiOjE2ODUwMzA4MzF9.rHGmBeEKm_WP2xLUDxGN500UddhAQqnhXASSeVhHO6M
